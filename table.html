@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+</head>
+<body>
+    <style>
+    html {
+  scroll-behavior: smooth;
+}
+    tr,th{
+        border-left: 1px solid #444b60;
+    
+        border-bottom: 1px solid #444b60;
+        border-top: 1px solid #444b60;
+          background-color: rgb(255, 255, 255);
+          color: #444b60;
+          
+          
+          
+          line-height: 1.54;
+    font-size: .86667rem;
+    padding: 8px 10px 9px;
+    font-weight: 400;
+    
+    
+    
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+        }
+        
+        
+     tr {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  
+}   
+        
+ tr,th:last-child{
+     
+ }        
+        
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+table{
+    width: fit-content;
+    border-radius: 13%;
+    font-family: Times New Roman;
+    border:none;
+}
+
+.listp {
+  
+  /* display: inline-block; */
+  
+  margin-right:10px;
+  
+  margin-bottom: 0 !important;
+}
+
+.listp a{
+    font-weight: 600;
+font-size: 18px;
+color: #3a3a3a;
+text-decoration: none;
+    
+}
+#frist {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right:none;
+}
+#last {
+  border-bottom-right-radius: 5px ;
+  border-top-right-radius: 5px;
+  border-right: 1px solid #444b60; 
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px ;
+}
+#main-tab {
+  background-color: transparent;
+}
+#main-tab:hover {
+  background-color: transparent;
+}
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #444b60;
+  color: #fff;
+  border:none;
+}
+.tab.active:hover{
+    border:none;
+}
+.tab:hover {
+  background-color: #444b60;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* Background Styles Only */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Times New Roman;
+}
+
+.side-links {
+  position: absolute;
+  top: 55px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
+  font-size: 30px;
+}
+        </style>
+        <body>
+        <table class="tab" id="main-tab" >
+          <tr>
+            <th data-tab-target="#A" class="active tab" id="frist">A</th>
+            <th data-tab-target="#B" class="tab">B</th>
+            <th data-tab-target="#C" class="tab">C</th>
+            <th data-tab-target="#D" class="tab">D</th>
+            <th data-tab-target="#E" class="tab">E</th>
+            <th data-tab-target="#F" class="tab">F</th>
+            <th data-tab-target="#G" class="tab">G</th>
+            <th data-tab-target="#H" class="tab">H</th>
+            <th data-tab-target="#I" class="tab">I</th>
+            <th data-tab-target="#J" class="tab">J</th>
+            
+            
+            <th data-tab-target="#K" class="tab">K</th>
+            <th data-tab-target="#L" class="tab">L</th>
+            <th data-tab-target="#M" class="tab">M</th>
+            <th data-tab-target="#N" class="tab">N</th>
+            <th data-tab-target="#O" class="tab">O</th>
+            <th data-tab-target="#P" class="tab">P</th>
+            <th data-tab-target="#Q" class="tab">Q</th>
+            <th data-tab-target="#R" class="tab">R</th>
+            <th data-tab-target="#S" class="tab">S</th>
+            <th data-tab-target="#T" class="tab">T</th>
+            <th data-tab-target="#U" class="tab">U</th>
+            <th data-tab-target="#V" class="tab">V</th>
+            <th data-tab-target="#W" class="tab">W</th>
+            <th data-tab-target="#X" class="tab">X</th>
+            <th data-tab-target="#Y" class="tab">Y</th>
+            <th data-tab-target="#Z" class="tab" id="last">Z</th>
+          </tr>
+        </table>
+        <br><br>
+        <div class="tab-content">
+            <div id="A" data-tab-content class="active">
+                
+   
+    <p class="listp">
+        
+        <a href="#Abberufung">Abberufung</a>
+        
+    </p> 
+    <p class="listp">
+        <a href="#Abbruchswert">Abbruchswert
+        </a>
+    </p> 
+    
+    <p class="listp">
+        <a href="#Abgabenordnung">Abgabenordnung (AO)
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#Abmarkung">Abmarkung
+
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#">Abgeltungsklausel
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#Abschreibung">Abschreibung (AfA)
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#Altersversorgung">Altersversorgung
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#Amortisation">Amortisation
+        </a>
+    </p>
+    
+    <p class="listp">
+        <a href="#Ankaufsrecht">Abbruchswert
+        </a>
+    </p>
+    
+        <p class="listp">
+        <a href="#Annuität">Annuität
+        </a>
+    </p>
+    
+    
+        <p class="listp">
+        <a href="#Aval">Aval
+        </a>
+    </p>
+          <br>     
+          <br>
+          <br>
+<p id="Abberufung ">
+<strong>Abberufung  </strong>
+
+<br>
+
+Ein Hausverwalter kann jederzeit durch einen mehrheitlichen Beschluss abberufen werden. Dies regelt die einfache Mehrheit aus § 26 Abs. 1 Satz 1 WEG. 
+
+</p>
+
+<p id="Abbruchswert">
+<strong>Abbruchswert </strong>
+
+<br>
+
+Der Abbruchswert ist der Wert eines bebauten, wirtschaftlich nicht mehr nutzbaren Grundstückes nach Abzug der Kosten für den Abbruch. <br>
+⦁	Grundstückswert – Kosten für Abbruch = Abbruchswert
+
+
+</p>
+
+<p id="Abgabenordnung">
+<strong>Abgabenordnung (AO) </strong>
+
+<br>
+
+Die Abgabenordnung ist ein grundlegendes Gesetzwerk, welches das deutsche Steuerrecht betrifft. Diese beinhaltet beispielsweise Begriffsdefinitionen, Vorschriften und Fristen.
+
+
+</p>
+
+
+
+<p id="Abmarkung">
+<strong>Abmarkung </strong>
+
+<br>
+
+Die Abmarkung ist das Herstellen von festen Grenzzeichen zwischen zwei Grundstücken.
+
+</p>
+
+
+
+<p id="Abgeltungsklausel">
+<strong>Abgeltungsklausel </strong>
+
+<br>
+
+Wenn ein Mietvertrag eine Abgeltungsklausel enthält, ist der Mieter verpflichtet sich bei Auszug an den Kosten für Schönheitsreparaturen zu beteiligen (sofern die Frsiten noch nicht abgelaufen sind).
+
+</p>
+
+<p id="Abschreibung">
+<strong>Abschreibung (AfA) </strong>
+
+<br>
+
+Je nach Nutzungsdauer einer Immobilie können verschiedene Kosten steuerlich geltend gemacht werden.
+
+</p>
+
+
+<p id="Altersversorgung">
+<strong>Altersversorgung
+ </strong>
+
+<br>
+
+Viele Menschen sorgen mit dem Kauf einer Immobilie für Ihre Altersversorgung. Mit dem richtigen Finanzierungsplan können Sie im Alter durch Mieteinnahmen ein zusätzliches Einkommen erwirtschaften.
+
+</p>
+
+
+
+
+<p id="Amortisation">
+<strong>Amortisation </strong>
+
+<br>
+
+Eine Amortisation beschreibt den Zeitraum, in dem die Aufwendungen z.B. für eine Immobilie durch Erträge wie z.B. Mieteinnahmen gedeckt werden.
+
+
+</p>
+
+<p id="Ankaufsrecht">
+<strong>Ankaufsrecht </strong>
+
+<br>
+
+Das Ankaufsrecht beschreibt, dass ein Kunde als erster die Befugnis hat, eine Immobilie zu erwerben. Dieses muss vertraglich festgehalten werden.
+
+</p>
+
+<p id="Annuität
+">
+<strong>Annuität
+ </strong>
+
+<br>
+
+Die Annuität ist der monatliche Beitrag, der jährlich für ein Darlehen oder eine Hypothek gezahlt wird. Diese besteht sowohl aus dem Zins- sowie aus dem Tilgungsanteil.
+
+
+
+
+</p>
+
+
+
+<p id="Aval">
+<strong>Aval </strong>
+
+<br>
+
+Aval ist ein anderer Begriff für das Wort Bürgschaft. Mit einer Bürgschaft verpflichtet sich der Bürge dem Gläubiger eines Dritten, für dessen Verbindlichkeiten aufzukommen.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div id="B" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Baulastenverzeichnis">Baulastenverzeichnis</a>
+        
+    </p> 
+    
+    
+    <p class="listp">
+        
+        <a href="#Bebaubarkeit">Bebaubarkeit</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Bebauungsplan">Bebauungsplan</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Beleihungswert">Beleihungswert</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Bürgschaft">Bürgschaft</a>
+        
+    </p>
+     
+    
+<br>
+<br>
+<br>
+            
+                
+<p id="Baulastenverzeichnis">
+<strong>Baulastenverzeichnis </strong>
+
+<br>
+Das Baulastenverzeichnis beinhaltet Lasten und Beschränkungen eines Grundstücks von öffentlichem Interesse. Dieses ist besonders bei Neubauten zu beachten.
+
+
+
+</p>
+
+<p id="Bebaubarkeit">
+<strong>Bebaubarkeit </strong>
+
+<br>
+
+Für die Bebauung eines Grundstückes genügt in der Regel eine Baugenehmigung. In einigen Fällen wird auch nur eine Bestätigung der zuständigen Behörde benötigt.
+
+
+</p>
+
+<p id="Bebauungsplan">
+<strong>Bebauungsplan </strong>
+
+<br>
+In einem Bebauungsplan wird die Art und Weise geregelt, in der eine Bebauung von Grundstücken möglich ist und die daraus resultierende Nutzung der von einer Bebauung freizuhaltenden Flächen.
+
+
+</p>
+
+
+<p id="Beleihungswert">
+<strong>Beleihungswert </strong>
+
+<br>
+Der Beleihungswert ist der Wert einer Immobilie, der mit hoher Wahrscheinlichkeit langfristig zu jedem beliebigen Zeitpunkt durch einen Verkauf erzielt werden kann. Dieser Wert ist Grundlage für die Finanzierung bei Banken.
+
+
+</p>
+
+
+<p id="Bürgschaft">
+<strong>Bürgschaft </strong>
+
+<br>
+Mit einer Bürgschaftserklärung verpflichtet sich der Bürge dem Gläubiger für die Verbindlichkeiten eines Dritten aufzukommen.
+
+
+</p>
+            </div>
+
+            <div id="C" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#CAP-Kredit">CAP-Kreditg</a>
+        
+    </p>    
+    
+    
+    
+    <p class="listp">
+        
+        <a href="#Carport">Carport</a>
+        
+    </p>
+    
+    
+    
+    <p class="listp">
+        
+        <a href="#Citylage">Citylage</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#CO2-Gebäudesanierungsprogramm">CO2-Gebäudesanierungsprogramm</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Concierge">Concierge</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Courtage">Courtage</a>
+        
+    </p>
+                
+     
+<br>
+<br>
+<br>
+           
+                
+<p id="CAP-Kredit">
+<strong>CAP-Kredit </strong>
+
+<br>
+Ein CAP-Kredit ist ein Kredit mit einem variablen Zinssatz, der alle drei Monate verändert werden kann. Zusätzlich gibt es jedoch eine Zinsobergrenze. 
+
+
+</p>
+
+
+<p id="Carport">
+<strong>Carport </strong>
+
+<br>
+
+Ein Carport ist eine Überdachung zum Schutz von Fahrzeugen vor Regen, Schnee oder Hagel.
+
+
+</p>
+
+<p id="Citylage">
+<strong>Citylage </strong>
+
+<br>
+
+
+
+
+Die Citylage ist meist die beliebteste Lage in einer Stadt. Sie zeichnet sich durch die zentrale Lage und die Nähe zu Geschäftshäusern sowie zu Einkaufsmöglichkeiten aus.
+
+</p>
+
+
+<p id="CO2-Gebäudesanierungsprogramm">
+<strong>CO2-Gebäudesanierungsprogramm </strong>
+
+<br>
+
+
+
+Energiesparende Baumaßnahmen werden von der Bundesregierung gefördert. So vergibt die Kreditanstalt für Wiederaufbau zinsgünstige Darlehen für Ihr CO2-Gebäudesanierungsprogramm. 
+
+</p>
+
+
+<p id="Concierge">
+<strong>Concierge </strong>
+
+<br>
+
+
+
+Der Begriff Concierge stammt aus dem Französischen und bedeutet Hausmeister. Häufig sind diese in Hotels oder Geschäftsgebäuden angestellt.
+
+</p>
+
+
+<p id="Courtage">
+<strong>Courtage</strong>
+
+<br>
+
+
+
+Die Courtage ist die Provision, die ein Makler nach einem erfolgreichen Vertragsabschluss erhält.
+
+
+</p>
+                
+                
+                
+                
+            </div>
+
+            <div id="D" data-tab-content>
+                
+                
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Dachneigung">Dachneigung</a>
+        
+    </p>  
+    
+    <p class="listp">
+        
+        <a href="#Dauerwohnrecht">Dauerwohnrecht</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Denkmalschutz">Denkmalschutz</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Dämmung">Dämmung</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+
+
+
+
+<p id="Dachneigung">
+<strong>Dachneigung </strong>
+
+<br>
+
+
+
+Der Grad der Dachneigung ist entscheidend für dessen Bezeichnung. Dächer mit einer Neigung von unter 10 Grad werden als Flachdächer bezeichnet. Flach geneigte Dächer haben eine Neigung von 10 bis 30 Grad. Bei Neigungen von über 30 Grad spricht man von Steildächern.
+
+
+</p>
+
+
+<p id="Dauerwohnrecht">
+<strong>Dauerwohnrecht </strong>
+
+<br>
+
+
+
+Mit dem Dauerwohnrecht hat eine Person das Recht, eine Wohnung bzw. eine Wohneinheit dauerhaft zu bewohnen.
+
+</p>
+
+
+<p id="Denkmalschutz">
+<strong>Denkmalschutz </strong>
+
+<br>
+
+
+
+Durch den Denkmalschutz werden historisch wertvolle Immobilien geschützt. Bei diesen müssen spezielle Bauvorschriften beachtet werden. Die Sanierung bzw. Modernisierung von denkmalgeschützten Objekten wird meistens durch die Bundesregierung unterstützt.
+
+
+</p>
+
+
+<p id="Dämmung">
+<strong>Dämmung </strong>
+
+<br>
+
+
+Durch die Dämmung wird der Verlust von Wärmeenergie in Gebäuden reduziert. So wird Ihre Immobilie durch eine optimale Dämmung deutlich energieeffizienter. 
+
+
+</p>
+
+            </div>
+
+            <div id="E" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Eigenkapital">Eigenkapital</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Erbbaurecht">Erbbaurecht</a>
+        
+    </p> 
+    
+    
+    <p class="listp">
+        
+        <a href="#Ertragswert">Ertragswert</a>
+        
+    </p> 
+    
+<br>
+<br>
+<br>
+            
+                
+<p id="Eigenkapital">
+<strong>Eigenkapital </strong>
+
+<br>
+
+
+
+Wenn Sie bei der Finanzierung Ihrer Immobilie möglichst viel Eigenkapital einsetzen, kann dies Ihre Konditionen deutlich verbessern. Jedoch ist zu beachten, dass besonders beim Erwerb einer Immobilie unvorhergesehene Kosten auf Sie zukommen könnten.
+
+
+</p>
+
+
+<p id="Erbbaurecht">
+<strong>Erbbaurecht </strong>
+
+<br>
+
+
+
+Das Erbbaurecht ist ein temporäres Recht auf einem Grundstück ein Bauwerk zu errichten. Das Erbbaurecht kann auch verkauft oder vererbt werden. 
+
+</p>
+
+
+<p id="Ertragswert">
+<strong>Ertragswert </strong>
+
+<br>
+
+
+Der Ertragswert ist der Wert, den eine Investition wie z.B. eine Immobilie in Zukunft erreichen wird. Im Gegensatz zum Sachwert ist der Ertragswert meistens nur eine Schätzung und kann nicht genau ermittelt werden.
+
+
+</p>
+                
+            </div>
+            <div id="F" data-tab-content>
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Fachwerkhaus">Fachwerkhaus</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Fassade">Fassade</a>
+        
+    </p>
+        
+        
+        
+    <p class="listp">
+        
+        <a href="#Fertighäuser">Fertighäuser</a>
+        
+    </p>
+        
+        
+    <p class="listp">
+        
+        <a href="#Festdarlehen">Festdarlehen</a>
+        
+    </p>
+        
+        
+    <p class="listp">
+        
+        <a href="#Finanzierungsplan">Finanzierungsplan</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Fremdkapital">Fremdkapital</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+    
+                    
+
+
+
+<p id="Fachwerkhaus">
+<strong>Fachwerkhaus </strong>
+
+<br>
+
+Die Bauweise von Fachwerkhäusern stammt aus dem Mittelalter. Sie bestehen aus einem tragenden Gerüst aus Holz 
+
+<br>
+Fachwerkhäuser wurden im Mittelalter auf eine spezielle Bauweise errichtet. Sie bestehen aus einem tragenden Gerüst aus Holz, dessen Zwischenräume mit Lehm oder Ziegeln befüllt worden sind.﻿
+</p>
+
+<p id="Fassade">
+<strong>Fassade </strong>
+
+<br>
+
+Die Fassade ist die sichtbare Außenhülle eines Gebäudes.
+
+
+
+</p>
+
+<p id="Fertighäuser">
+<strong>Fertighäuser </strong>
+
+<br>
+
+
+
+Bei Fertighäusern werden einzelne Bauteile vom Anbieter vorgefertigt und an der Buastelle nur noch zusammengefügt.
+
+
+</p>
+
+<p id="Festdarlehen">
+<strong>Festdarlehen </strong>
+
+<br>
+
+
+Ein Festdarlehen ist ein Kredit, der über einen bestimmten Zeitraum tilgungsfrei bleibt.
+
+
+</p>
+
+<p id="Finanzierungsplan">
+<strong>Finanzierungsplan </strong>
+
+<br>
+
+
+In einem Finanzierungsplan werden alle Kosten Ihres Bauvorhabens detailliert zusammengetragen.
+
+
+</p>
+
+<p id="Fremdkapital">
+<strong>Fremdkapital </strong>
+
+<br>
+
+
+In der Immobilienfinanzierung beschreibt das Fremdkapital die Gesamtkosten eines Immobilienprojektes abzüglich des Eigenkapitals.
+
+
+</p>
+
+        
+            </div>
+            <div id="G" data-tab-content>
+    <p class="listp">
+        
+        <a href="#Gebrauchsabnahme">Gebrauchsabnahme</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Geltungsdauer">Geltungsdauer</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Gemeinschaftseigentum">Gemeinschaftseigentum</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Gemeinschaftsordnung">Gemeinschaftsordnung</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Generalunternehmer">Generalunternehmer</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Gewährleistung">Gewährleistung</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Grenzabstand">Grenzabstand</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Grundriss">Grundriss</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Grundschuld">Grundschuld</a>
+        
+    </p>
+    
+        <p class="listp">
+        
+        <a href="#Gutachten">Gutachten</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+
+
+ <p id="Gebrauchsabnahme">
+<strong>Gebrauchsabnahme </strong>
+
+<br>
+
+
+Bei der Gebrauchsabnahme eines Gebäudes wird von der zuständigen Baubehörde überprüft, ob alle Vorschriften bautechnisch und baurechtlich eingehalten wurden. 
+
+
+
+
+</p>
+
+<p id="Geltungsdauer">
+<strong>Geltungsdauer </strong>
+
+<br>
+
+Die Geltungsdauer eines Kredits beschreibt die Laufzeit zwischen der Auszahlung und der vollständigen Rückzahlung.
+
+
+</p>
+
+<p id="Gemeinschaftseigentum">
+<strong>Gemeinschaftseigentum </strong>
+
+<br>
+
+
+Das Gemeinschaftseigentum ist gemeinsames Eigentum einer Wohnungseigentümergesellschaft. Dies sind beispielsweise Teile des Grundstückes und Einrichtungen eines Gebäudes.
+
+
+
+
+
+</p>
+
+<p id="Gemeinschaftsordnung">
+<strong>Gemeinschaftsordnung </strong>
+
+<br>
+
+Die Gemeinschaftsordnung enthält Regeln innerhalb einer Wohnungseigentümergemeinschaft.
+
+</p>
+
+<p id="Generalunternehmer">
+<strong>Generalunternehmer </strong>
+
+<br>
+
+
+Ein Generalunternehmer ist ein Bauunternehmer, der aus Eigenleistung oder mit der Hilfe von Sub-Unternehmen alle Bauleistungen eines Immobilienprojektes durchführt.
+Der Generalunternehmer ist in der Regel ein Bauunternehmer, der selbst oder mit Unterstützung von Sub-Unternehmern alle notwendigen Bauleistungen zur Durchführung eines Bauvorhabens erbringt.
+
+
+ 
+
+
+</p>
+
+<p id="Gewährleistung">
+<strong>Gewährleistung </strong>
+
+<br>
+Mit einer Gewährleistung garantiert der Bauunternehmer die fachgerechte Ausführung einzelner Bauleistungen.
+
+
+</p>
+
+<p id="Grenzabstand">
+<strong>Grenzabstand </strong>
+
+<br>
+
+
+Der Grenzabstand ist der Abstand, der zwischen zwei Gebäuden zu dem jeweiligen Nachbargrundstück eingehalten werden muss.
+
+
+
+
+
+</p>
+
+<p id="Grundriss">
+<strong>Grundriss </strong>
+
+<br>
+
+Der Grundrisse ist eine zeichnerisch dargestellte, zweidimensionale Abbildung einer räumlichen Gegebenheit.
+
+</p>
+
+<p id="Grundschuld">
+<strong>Grundschuld </strong>
+
+<br>
+
+
+Die Grundschuld ist eine Sicherheit, die der Eigentümer einer Immobilie bzw. eines Grundstückes vom Gläubiger fordert.
+Die Grundschuld ist eine dingliche Sicherheit eines Grundstücks für eine Forderung.
+
+
+
+</p>
+
+<p id="Gutachten">
+<strong>Gutachten </strong>
+
+<br>
+
+Ein Gutachten wird von einem Sachverständigem erstellt und gibt einen Überblick über die Gegebenheiten und Mängel einer Immobilie oder eines Grundstückes. Dieses Gutachten kann als Grundlage für die Wertermittlung einer Immobilie genutzt werden. Dabei spielen natürlich auch andere Aspekte, wie zum Beispiel die aktuelle Martksituation eine wichtige Rolle.
+<br>
+Ein Gutachten eines Sachverständigen gibt einen neutralen Überblick über die Gegebenheiten und eventuelle Mängel einer Immobilie oder eines Grundstücks. Oft bildet das Gutachten die Basis für eine anschließende Wertermittlung von Immobilien
+
+</p>
+            </div>
+            <div id="H" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Hausanschluss">Hausanschluss</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Hausordnung">Hausordnung</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Hausratsversicherung">Hausratsversicherung</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Hausverwaltung">Hausverwaltung</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#HOAI">HOAI</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+
+                
+<p id="Hausanschluss">
+<strong>Hausanschluss </strong>
+
+<br>
+
+
+Der Hausanschluss ist der Anschluss an die Leitungen der Gas-, Wasser,- Strom oder Fernwärme der jeweiligen Versorgungsunternehmen.
+
+
+
+
+</p>
+
+<p id="Hausordnung">
+<strong>Hausordnung </strong>
+
+<br>
+
+Die Hausordnung beinhaltet alle Regeln und Vorschriften innerhalb eines Gebäudes. Diese muss natürlich von allen Wohnparteien eingehalten werden.
+
+<br>
+In der Hausordnung werden die jeweiligen Regeln und Vorschriften eines Gebäudes aufgelistet, die von allen Wohnparteien eingehalten werden sollten.
+</p>
+
+<p id="Hausratsversicherung">
+<strong>Hausratsversicherung </strong>
+
+<br>
+
+
+
+Mit einer Hausratsversicherung versichern Sie sich gegen Schäden durch Leitungswasser, Unwetter oder Einbruch.
+<br>
+Mit einer Hausratsversicherung sichert man sich unter anderem gegen Schäden durch Leitungswasser, Hagel, Sturm oder auch Einbruch ab.
+
+
+
+
+
+
+</p>
+
+
+<p id="Hausverwaltung">
+<strong>Hausverwaltung </strong>
+
+<br>
+Eine Hausverwaltung kümmert sich um verschiedene Bereiche einer Immobilie. Hierzu gehören zum Beispiel die Mieterangelegenheiten.
+
+
+</p>
+
+<p id="HOAI">
+<strong>HOAI </strong>
+
+<br>
+
+
+Die Abkürzung HOAI steht für „Honorarabrechnung für Architekten und Ingenieure“ und bildet die Grundlage für die Leistungsabrechnung der Architekten und Ingenieure. 
+
+
+</p>
+                
+            </div>
+            <div id="I" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Immobilienfonds">Immobilienfonds</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Indexmiete">Indexmiete</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Instandhaltung">Instandhaltung</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Inklusivmiete">Inklusivmiete</a>
+        
+    </p>
+     
+<br>
+<br>
+<br>
+ 
+                
+<p id="Immobilienfonds">
+<strong>Immobilienfonds </strong>
+
+<br>
+
+
+Immobilienfonds sind eine Kapitalanlageform, bei der Investoren sich an Immobilien beteiligen können.
+
+
+
+
+</p>
+
+<p id="Indexmiete">
+<strong>Indexmiete </strong>
+
+<br>
+
+Bei der Indexmiete gibt es einen variablen Zinssatz, der unter bestimmten Voraussetzungen verändert werden kann.<br>
+Der Begriff Indexmiete beschreibt einen variablen Mietzins, der unter bestimmten Voraussetzungen jederzeit verändert werden kann.
+
+</p>
+
+<p id="Instandhaltung">
+<strong>Instandhaltung </strong>
+
+<br>
+
+
+Im Laufe der Jahre müssen an Ihrer Immobilie regelmäßig Instandhaltungsmaßnahmen getroffen werden. So erhalten Sie den Wert Ihrer Immobilie. Beispiele für Instandhaltungsmaßnahmen sind die Behebung von Schäden oder die technische Modernisierung Ihrer Immobilie.
+
+
+
+
+
+</p>
+
+<p id="Inklusivmiete">
+<strong>Inklusivmiete </strong>
+
+<br>
+
+Die Inklusivmiete ist die monatliche Miete inklusive aller Nebenkosten.
+
+</p>
+                
+                
+            </div>
+            <div id="J" data-tab-content>
+    
+    
+    <p class="listp">
+        
+        <a href="#Jahresabrechnung">Jahresabrechnung</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Jahresrohertrag">Jahresrohertrag</a>
+        
+    </p>
+    
+    
+    <p class="listp">
+        
+        <a href="#Jahreszins">Jahreszins</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+
+    
+<p id="Jahresabrechnung">
+<strong>Jahresabrechnung </strong>
+
+<br>
+
+
+
+In der Jahresabrechnung müssen Sie alle Einnahmen und Ausgaben innerhalb eines Jahres auflisten.
+
+
+
+
+
+
+</p>
+
+<p id="Jahresrohertrag">
+<strong>Jahresrohertrag </strong>
+
+<br>
+Der Jahresrohertrag beschreibt die Mieteinnahmen exklusive aller Nebenkosten innerhalb eines Jahres.
+
+
+</p>
+
+<p id="Jahreszins">
+<strong>Jahreszins </strong>
+
+<br>
+
+Der Jahreszins beschreibt die jährlich zu tragenden Kosten für ein Darlehen.
+
+
+</p>
+    
+                
+            </div>
+            <div id="K" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Kältebrücke">Kältebrücke</a>
+        
+    </p>
+    
+    
+    
+    <p class="listp">
+        
+        <a href="#Kaution">Kaution</a>
+        
+    </p> 
+    
+    <p class="listp">
+        
+        <a href="#Kostenvoranschlag">Kostenvoranschlag</a>
+        
+    </p> 
+    
+    <p class="listp">
+        
+        <a href="#Kreditkonsolidierung">Kreditkonsolidierung</a>
+        
+    </p> 
+    
+    <p class="listp">
+        
+        <a href="#Kreditwürdigkeit">Kreditwürdigkeit</a>
+        
+    </p> 
+    
+    <p class="listp">
+        
+        <a href="#Kubatur">Kubatur</a>
+        
+    </p> 
+    
+<br>
+<br>
+<br>
+            
+                
+<p id="Kältebrücke">
+<strong>Kältebrücke </strong>
+
+<br>
+
+
+
+Kältebrücken sind einzelne Bauteile eines Gebäudes, in denen Wärme leicht nach außen dringen kann.
+
+
+
+
+
+ 
+
+</p>
+
+<p id="Kaution">
+<strong>Kaution </strong>
+
+<br>
+Eine Kaution wird zu Beginn eines Mietverhältnisses vom Vermieter gefordert. Diese gilt als Sicherheit, falls der Mieter seinen vertraglichen Pflichten nicht nachkommt. Die Höhe der Mietkaution entspricht der dreifachen Kaltmiete.
+
+
+</p>
+
+<p id="Kostenvoranschlag">
+<strong>Kostenvoranschlag </strong>
+
+<br>
+In einem Kostenvoranschlag werden alle Kosten für die aufzubringenden Leistungen aufgelistet. Dieser ist in der Regel unverbindlich und kostenlos. Beispielsweise bei einem Bauvorhaben sollten Sie die Angebote verschiedener Bauunternehmen vergleichen.
+
+
+</p>
+
+<p id="Kreditkonsolidierung">
+<strong>Kreditkonsolidierung </strong>
+
+<br>
+
+
+Eine Kreditkonsolidierung beschreibt das Zusammentragen mehrerer Kredite. Dies ist sinnvoll, wenn die Zinsen der einzelnen Kredite über dem Zinssatz des ablösenden Kredites liegen.
+
+
+
+
+
+
+
+</p>
+
+<p id="Kreditwürdigkeit">
+<strong>Kreditwürdigkeit </strong>
+
+<br>
+Bevor ein Kredit gewährt wird, wird die Kreditwürdigkeit bzw. die Bonität des Kreditnehmers geprüft.
+
+
+</p>
+
+<p id="Kubatur">
+<strong>Kubatur </strong>
+
+<br>
+
+Die Kubatur ist das Volumen eines Gebäudes.
+
+</p>
+            </div>
+            <div id="L" data-tab-content>
+                
+                
+    <p class="listp">
+        
+        <a href="#Landschaftsschutzgebiet">Landschaftsschutzgebiet (LSG)</a>
+        
+    </p> 
+    
+    
+    <p class="listp">
+        
+        <a href="#Lastenzuschuss">Lastenzuschuss</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Leistungsverzeichnis">Leistungsverzeichnis</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#LichteHöhe">Lichte Höhe</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Liegenschaftsamt">Liegenschaftsamt</a>
+        
+    </p>
+                
+     
+<br>
+<br>
+<br>
+           
+                
+<p id="Landschaftsschutzgebiet">
+<strong>Landschaftsschutzgebiet (LSG) </strong>
+
+<br>
+
+
+Landschaftsschutzgebiete sollen Naturlandschaften schützen. Daher müssen diese bei Bauvorhaben berücksichtigt werden.
+
+Landschaftsschutzgebiete dienen dem Erhalt und dem Schutz von Naturlandschaften. Sie sind durch Schilder ausgewiesen und müssen bei Bauvorhaben berücksichtigt werden.
+
+
+
+
+
+</p>
+
+
+<p id="Lastenzuschuss">
+<strong>Lastenzuschuss </strong>
+
+<br>
+
+Als Lastenzuschuss wird das Wohngeld bezeichnet, das Eigentümer beantragen können. Er dient ebenso wie der Mietzuschuss dazu, dass die Eigentümer wirtschaftlich abgesichert werden, um angemessen sowie familiengerecht wohnen zu können.
+
+</p>
+
+
+<p id="Leistungsverzeichnis">
+<strong>Leistungsverzeichnis </strong>
+
+<br>
+
+Im Leistungsverzeichnis werden alle Leistungen eines Bauvorhabens aufgelistet. Beispielsweise können Bauherren so anhand dieses Verzeichnisses Angebote verschiedener Bauunternehmen vergleichen. 
+
+
+
+
+
+
+
+</p>
+
+<p id="LichteHöhe">
+<strong>Lichte Höhe </strong>
+
+<br>
+
+Die lichte Höhe beschreibt die Höhe eines Raumes vom Boden bis zur Decke.
+
+</p>
+
+<p id="Liegenschaftsamt">
+<strong>Liegenschaftsamt </strong>
+
+<br>
+
+
+Das Liegenschaftsamt ist zuständig für die Verwaltung des bebauten und unbebauten Grundbesitzes einer Gemeinde oder Stadt.
+
+</p>
+            </div>
+            <div id="M" data-tab-content>
+
+
+    <p class="listp">
+        
+        <a href="#Mansarde">Mansarde</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Mantelbauweise">Mantelbauweise</a>
+        
+    </p>
+
+
+
+    <p class="listp">
+        
+        <a href="#Marktwert">Marktwert</a>
+        
+    </p>
+
+    <p class="listp">
+        
+        <a href="#Mehrfamilienhaus">Mehrfamilienhaus (MFH)</a>
+        
+    </p>
+
+
+     <p class="listp">
+        
+        <a href="#Mischgebiet">Mischgebiet (MI)</a>
+        
+    </p>
+
+    <p class="listp">
+        
+        <a href="#Mängelhaftung">Mängelhaftung</a>
+        
+    </p>
+
+
+<br>
+<br>
+<br>
+
+<p id="Mansarde">
+<strong>Mansarde </strong>
+
+<br>
+
+
+Die Mansarde ist eine Wohnung in einem ausgebauten Dachgeschoss. 
+
+
+
+
+
+
+</p>
+
+<p id="Mantelbauweise">
+<strong>Mantelbauweise </strong>
+
+<br>
+
+Bei der Mantelbauweise bestehen die äußeren Schichten der Wand aus unterschiedlichen Dämmstoffen. Im Inneren der Wände befindet sich ein tragender Kern.
+
+</p>
+
+<p id="Marktwert">
+<strong>Marktwert </strong>
+
+<br>
+
+Der Marktwert beschreibt den aktuellen Wert einer Immobilie. Dabei wird nicht nur der Sachwert ermittelt, sondern auch die aktuelle Marktsituation beachtet.
+
+</p>
+
+<p id="Mehrfamilienhaus">
+<strong>Mehrfamilienhaus (MFH) </strong>
+
+<br>
+
+
+Ein Mehrfamilienhaus ist ein Haus mit mehreren Wohnungen.
+
+
+
+
+
+
+
+
+</p>
+
+<p id="Mischgebiet">
+<strong>Mischgebiet (MI) </strong>
+
+<br>
+
+In einem Mischgebiet befinden sich sowohl Wohn- als auch Gewerbeimmobilien.
+
+</p>
+
+<p id="Mängelhaftung">
+<strong>Mängelhaftung </strong>
+
+<br>
+
+Die Mängelhaftung ist mit einer Gewährleistung von Seiten des Bauunternehmers zu vergleichen. Er garantiert für die einwandfreie Leistungserbringung sowie für die Behebung von Mängeln für einen bestimmten Zeitraum.
+
+</p>
+
+
+
+
+            </div>
+            <div id="N" data-tab-content>
+
+    <p class="listp">
+        
+        <a href="#Nebenkosten">Nebenkosten</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Niedrigenergiehaus
+">Niedrigenergiehaus
+</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Nießbrauch">Nießbrauch</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Notar">Notar</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Nutzfläche">Nutzfläche (NF)
+</a>
+        
+    </p>
+
+<br>
+<br>
+<br>
+
+
+<p id="Nebenkosten">
+<strong>Nebenkosten </strong>
+
+<br>
+
+
+In einem Mietverhältnis beschreiben Nebenkosten alle Kosten neben der Miete wie zum Beispiel für Wasserversorgung, Müllbeseitigung oder Heizung.
+
+
+
+
+
+
+
+</p>
+
+<p id="Niedrigenergiehaus">
+<strong>Niedrigenergiehaus </strong>
+
+<br>
+
+Als Niedrigenergiehäuser werden Häuser bezeichnet, dessen Jahreswärmeschutzbedarf mindestens 25% unter den Anforderungen der Wärmeschutzverordnung liegen.
+
+</p>
+
+
+<p id="Nießbrauch">
+<strong>Nießbrauch </strong>
+
+<br>
+Haben Sie das Nießbrauchrecht für eine Immobilie, können Sie diese als wirtschaftliches Eigentum nutzen. So können Sie diese selbst bewohnen oder auch vermieten.
+
+
+</p>
+
+<p id="Notar">
+<strong>Notar </strong>
+
+<br>
+
+
+Der Notar ist für die rechtsverbindliche Beglaubigung von Verträgen und anderen Dokumenten zuständig. 
+
+
+
+
+
+
+</p>
+
+<p id="Nutzfläche">
+<strong>Nutzfläche (NF) </strong>
+
+<br>
+Die Nutzfläche ist ein Teil der Grundfläche. Sie beschreibt den Teil einer Immobilie der tatsächlich genutzt werden kann. So können zum Beispiel Keller und Dachboden zur Nutzfläche gezählt werden.
+
+
+</p>
+
+
+            </div>
+            <div id="O" data-tab-content>
+                
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Obergeschoss">Obergeschoss (OG)</a>
+        
+    </p>            
+                
+    <p class="listp">
+        
+        <a href="#OffeneBauweise">Offene Bauweise</a>
+        
+    </p>
+    
+<br>
+<br>
+<br>
+
+<p id="Obergeschoss">
+<strong>Obergeschoss (OG) </strong>
+
+<br>
+
+Alle Etagen außer dem Erdgeschoss und dem Dachgeschoss werden als Obergeschoss bezeichnet.
+
+
+
+
+
+</p>
+
+
+<p id="OffeneBauweise">
+<strong>Offene Bauweise </strong>
+
+<br>
+
+Die offene Bauweise beschreibt die Bauweise eines Einfamilienhaus, welches freistehend auf einem Grundstück erbaut wurde.
+
+</p>
+    
+    </div>
+            <div id="P" data-tab-content>
+                
+                
+                
+                
+                
+        <p class="listp">
+        
+        <a href="#Parkett">Parkett</a>
+        
+        </p> 
+        
+        
+        <p class="listp">
+        
+        <a href="#Passivhaus">Passivhaus</a>
+        
+        </p>
+        
+        <p class="listp">
+        
+        <a href="#Pavillon">Pavillon</a>
+        
+        </p>
+        
+        
+        <p class="listp">
+        
+        <a href="#Photovoltaik">Photovoltaik</a>
+        
+        </p>
+        
+<br>
+<br>
+<br>
+
+                
+<p id="Parkett">
+<strong>Parkett </strong>
+
+<br>
+
+
+
+Parkett ist ein Fußbodenbelag aus Holz, der in Innenräumen verwendet wird.
+
+
+
+
+
+
+
+
+
+</p>
+
+
+<p id="Passivhaus">
+<strong>Passivhaus </strong>
+
+<br>
+
+Ein Passivhaus benötigt keine normale Heizanlage. Stattdessen werden für den Heizenergiebedarf alternative Energiequellen wie Sonneneinstrahlung oder Energie aus Abwärme verwendet.
+
+
+</p>
+
+
+
+<p id="Pavillon">
+<strong>Pavillon </strong>
+
+<br>
+
+Ein Pavillon ist in der Regel ein gartenhausähnliches Bauwerk ohne Wände in Parks oder Gärten.
+
+</p>
+
+
+<p id="Photovoltaik">
+<strong>Photovoltaik </strong>
+
+<br>
+
+Photovoltaik beschreibt die Umwandlung von Sonnen- in elektrische Energie.
+
+</p>
+                
+            </div>
+            <div id="Q" data-tab-content>
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Querschnitt">Querschnitt</a>
+        
+</p>  
+
+<br>
+<br>
+<br>
+
+
+
+<p id="Querschnitt">
+<strong>Querschnitt </strong>
+
+<br>
+
+
+Der Querschnitt eines Hauses illustriert die Raumaufteilung der Immobilie und kann somit als Grundlage für die Grundrisszeichnung genutzt werden.
+
+
+</p>
+            </div>
+            <div id="R" data-tab-content>
+                
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Randbewehrung">Randbewehrung</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Rate">Rate</a>
+        
+    </p>
+    <p class="listp">
+        
+        <a href="#Realkredit">Realkredit</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#RegenerativeEnergien">Regenerative Energien</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Reihenhaus">Reihenhaus</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Restschuld">Restschuld</a>
+        
+    </p>
+    <br>
+    <br>                
+    <br>                
+
+<p id="Randbewehrung">
+<strong>Randbewehrung </strong>
+
+<br>
+
+
+Bei einer Randbewehrung werden ungestützte Ränder bei Platten oder Balken mit einer „Bewehrung“ (Verstärkung) stabilisiert.
+
+
+
+
+
+
+
+
+</p>
+
+<p id="Rate">
+<strong>Rate </strong>
+
+<br>
+
+Eine Rate ist der vertraglich vereinbarte Betrag, der zu einem bestimmten Termin an den Darlehensgeber gezahlt werden muss. In den meisten Fällen wird bei einem Darlehen eine monatliche Rate vereinbart.
+
+</p>
+
+<p id="Realkredit">
+<strong>Realkredit </strong>
+
+<br>
+
+Der Realkredit ist ein Darlehen, das über Vermögens- oder Sachwerte abgesichert wird. So kann ein Kredit beispielsweise durch eine Immobilie abgesichert werden.
+
+</p>
+
+<p id="RegenerativeEnergien">
+<strong>Regenerative Energien </strong>
+
+<br>
+
+
+Regenerative Energien oder auch erneuerbare Energien sind Energien, die aus nachhaltigen Quellen wie Wind, Wasser oder Sonneneinstrahlung gewonnen werden.
+
+
+
+
+
+
+
+</p>
+
+<p id="Reihenhaus">
+<strong>Reihenhaus </strong>
+
+<br>
+Reihenhäuser sind Häuser, die Wand an Wand gebaut werden. Ein Haus wird erst als Reihenhaus bezeichnet, wenn mindestens drei Häuser aneinandergebaut sind. Das Haus am Anfang und am Ende einer „Hausreihe“ wird Endreihenhaus genannt.
+
+
+</p>
+
+<p id="Restschuld">
+<strong>Restschuld </strong>
+
+<br>
+
+Die Restschuld ist der Betrag, der von dem Kreditnehmer am Ende der vereinbarten Vertragsfrist zu zahlen ist.
+
+
+</p>
+            </div>
+            <div id="S" data-tab-content>
+              
+              
+    <p class="listp">
+        
+        <a href="#Sachwert">Sachwert</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Sanierung">Sanierung</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Satteldach">Satteldach</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Solaranlage">Solaranlage</a>
+        
+    </p>
+    
+    <p class="listp">
+        
+        <a href="#Staffelmiete">Staffelmiete</a>
+        
+    </p>
+    
+    <br>
+    <br>
+    <br>
+              
+<p id="Sachwert">
+<strong>Sachwert </strong>
+
+<br>
+
+
+
+Der Sachwert ist der Wert von Wirtschaftsgütern wie z.B. Gebäuden. Er ist die Summe von Bodenwert, Bauwert der Außenanlagen und Gebäudewert. Bei dem Sachwert einer Immobilie wird die aktuelle Marktsituation nicht beachtet.
+
+
+
+
+
+
+</p>
+
+<p id="Sanierung">
+<strong>Sanierung </strong>
+
+<br>
+
+Sanierung ist die Erneuerung von Teilen eines Gebäudes durch Renovierungs- und Reparaturmaßnahkmen.
+
+</p>
+
+<p id="Satteldach">
+<strong> </strong>
+
+<br>
+
+Das Satteldach besteht aus zwei oder mehr geneigten Flächen, die an der höchsten Stelle aufeinander treffen.
+
+
+</p>
+
+<p id="Solaranlage">
+<strong>Solaranlage </strong>
+
+<br>
+
+Durch eine Solaranlage wird durch Sonneneinstrahlung Energie gewonnen. Logischerweise sind Solaranlagen meistens auf dem Dach angebracht.
+
+
+
+
+
+
+</p>
+
+<p id="Staffelmiete">
+<strong>Staffelmiete </strong>
+
+<br>
+Bei einer Staffelmiete wird die Miete nach einem festgelegten Zeitraum automatisch erhöht. Die Mieterhöhungen werden im Mietvertrag festgehalten.
+
+
+</p>
+              
+            </div>
+            <div id="T" data-tab-content>
+    
+    
+    <p class="listp">
+        
+        <a href="#Teilbaugenehmigung">Teilbaugenehmigung</a>
+        
+</p>
+    
+    <p class="listp">
+        
+        <a href="#Trennwand">Trennwand</a>
+        
+</p>
+    
+    <p class="listp">
+        
+        <a href="#Typenhaus">Typenhaus</a>
+        
+</p>
+
+
+    <br>
+    <br>
+    <br>
+               
+
+<p id="Teilbaugenehmigung">
+<strong>Teilbaugenehmigung </strong>
+
+<br>
+
+Bei einer Teilbaugenehmigung wird der Bau von bestimmten Gebäudeabschnitten genehmigt. Diese kann z.B. bei größeren Bauprojekten mit langwierigen Genehmigungsverfahren beantragt werden.
+
+
+
+
+
+
+
+
+</p>            
+
+<p id="Trennwand">
+<strong>Trennwand </strong>
+
+<br>
+Eine Trennwand ist eine Innenwand, die keine tragende Funktion hat und Räume voneinander trennt.
+
+
+</p>
+
+<p id="Typenhaus">
+<strong>Typenhaus </strong>
+
+<br>
+Bei einem Typenhaus sind die Form und der Grundriss fest vorgegeben und können nicht verändert werden. 
+
+
+
+</p>
+</div>
+<div id="U" data-tab-content>
+                
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Umbau">Umbau</a>
+        
+</p>
+
+
+    <p class="listp">
+        
+        <a href="#Umnutzung">Umnutzung</a>
+        
+</p>
+
+
+    <p class="listp">
+        
+        <a href="#Untermiete">Untermiete</a>
+        
+</p>
+                
+                
+        <br>
+        <br>
+        <br>
+
+<p id="Umbau">
+<strong>Umbau </strong>
+
+<br>
+
+
+
+Bei einem Umbau wird eine Immobilie im Stil, in der Form oder Ausführung verändert.
+
+
+
+
+
+
+
+
+</p>
+
+
+<p id="Umnutzung">
+<strong>Umnutzung </strong>
+
+<br>
+
+Bei einer Umnutzung einer Immobilie wird die Nutzungsart eines Gebäudes oder eines Teiles des Gebäudes verändert. Dafür muss ein Antrag bei der zuständigen Baubehörde gestellt werden.
+
+</p>
+
+
+<p id="Untermiete">
+<strong>Untermiete </strong>
+
+<br>
+Bei einer Untervermietung vermietet ein Mieter einen Teil seines gemieteten Objektes oder auch das gesamte Mietobjekt an einen Untermieter.
+
+
+</p>
+                
+                
+                
+            </div>
+            <div id="V" data-tab-content>
+
+
+
+    <p class="listp">
+        
+        <a href="#Vergleichsmiete">Vergleichsmiete</a>
+        
+    </p>
+    <p class="listp">
+        
+        <a href="#Verkehrswert">Verkehrswert</a>
+        
+    </p>
+
+    <br>
+    <br>
+    <br>
+    
+
+<p id="Verkehrswert">
+<strong>Verkehrswert </strong>
+
+<br>
+
+
+Der Verkehrswert eines Gebäudes ist der Marktwert einer Immobilie.
+
+
+
+
+
+</p>
+
+
+
+            </div>
+            <div id="W" data-tab-content>
+                
+    
+    
+    
+    <p class="listp">
+        
+        <a href="#Warmmiete">Warmmiete</a>
+        
+    </p>            
+                
+        <p class="listp">
+        
+        <a href="#Wasserzähler">Wasserzähler</a>
+        
+    </p>        
+    <p class="listp">
+        
+        <a href="#Wertermittlung">Wertermittlung</a>
+        
+    </p>            
+    
+    
+    <p class="listp">
+        
+        <a href="#Wohnfläche">Wohnfläche</a>
+        
+    </p>            
+     
+    
+<br>
+<br>
+<br>            
+                
+<p id="Warmmiete">
+<strong>Warmmiete </strong>
+
+<br>
+
+
+Die Warmmiete ist der gesamte Mietbetrag inklusive aller Nebenkosten wie Heizung, Müllabfuhr oder Warmwasser.
+
+
+
+
+
+</p>
+
+<p id="Wasserzähler">
+<strong>Wasserzähler </strong>
+
+<br>
+
+Ein Wasserzähler ist ein Messgerät, das den Wasserverbrauch z.B. eines Gebäudes oder einer Wohnung angibt.
+
+</p>
+
+<p id="Wertermittlung">
+<strong>Wertermittlung </strong>
+
+<br>
+
+
+Bei der Wertermittlung von Immobilien wird der Wert des Objektes ermittelt. Gutachter ermitteln in den meisten Fällen lediglich den Sachwert einer Immobilie, während Immobilienmakler anhand von Vergleichsobjekten und der aktuellen Marktsituation den Verkehrswert ermitteln.
+
+
+
+
+
+</p>
+
+
+<p id="Wohnfläche">
+<strong>Wohnfläche </strong>
+
+<br>
+Die Wohnfläche bezeichnet alle Räume, die bewohnt werden können. Kellerräume, Garagen oder Abstellkammern gehören nicht dazu.
+
+
+</p>
+                
+                
+            </div>
+            <div id="X" data-tab-content>
+                
+            </div>
+            <div id="Y" data-tab-content>
+                
+            </div>
+            <div id="Z" data-tab-content>
+                
+                
+                
+    <p class="listp">
+        
+        <a href="#Zwangsversteigerung">Zwangsversteigerung</a>
+        
+</p>
+
+
+<br>
+<br>
+<br>            
+                
+<p id="Zwangsversteigerung">
+<strong>Zwangsversteigerung </strong>
+
+<br>
+
+Eine Zwangsversteigerung findet statt, wenn ein Darlehensnehmer seinen Kredit nicht mehr zahlen kann und die Bank ihre Ansprüche geltend machen möchte. So kann z.B. ein Haus in einer Zwangsversteigerung verkauft werden.
+
+
+
+</p>                
+                
+                
+                
+                
+            </div>
+        </div>
+    <script>
+         const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
+    </script>
+</body>
+</html>
